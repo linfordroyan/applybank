@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplyBank</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">India first · Global ready</p>
+          <h1>ApplyBank</h1>
+        </div>
+        <div class="header-actions">
+          <button type="button" id="export-btn" class="ghost" title="Export JSON">
+            Export
+          </button>
+          <label class="ghost file-label" title="Import JSON">
+            Import
+            <input type="file" id="import-input" accept="application/json,.json" hidden />
+          </label>
+        </div>
+      </header>
+
+      <p class="subtitle">
+        Save CTC, notice period, and common answers — paste into any application form.
+      </p>
+
+      <div class="toolbar">
+        <input
+          type="search"
+          id="search"
+          placeholder="Search snippets…"
+          autocomplete="off"
+        />
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+
+      <p id="limit-note" class="limit-note" hidden></p>
+      <p id="toast" class="toast" role="status" hidden></p>
+
+      <ul id="snippet-list" class="snippet-list"></ul>
+
+      <form id="snippet-form" class="snippet-form">
+        <h2 id="form-title">Add snippet</h2>
+        <input type="hidden" id="edit-id" />
+        <label>
+          Title
+          <input type="text" id="title" required maxlength="80" placeholder="Expected CTC" />
+        </label>
+        <label>
+          Category
+          <select id="category" required></select>
+        </label>
+        <label>
+          Answer
+          <textarea
+            id="body"
+            required
+            rows="4"
+            maxlength="2000"
+            placeholder="Write the exact text you paste into forms…"
+          ></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="button" id="cancel-edit" class="ghost" hidden>Cancel</button>
+          <button type="submit" id="save-btn" class="primary">Save snippet</button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "applybank",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "India-first job application answer bank Chrome extension",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.2.0",
+    "@types/chrome": "^0.2.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  },
+  "dependencies": {
+    "@fontsource/figtree": "^5.3.0",
+    "@fontsource/source-serif-4": "^5.3.0"
+  }
+}
